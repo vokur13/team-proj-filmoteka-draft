@@ -1,0 +1,28 @@
+{{#each this}}
+  <li class='trend-item'>
+    <div class='trend-poster'>
+      <img src='{{poster_path}}' alt='{{title}}' loading='lazy' />
+      <a href={{poster_path}}><img
+          src={{poster_path}}
+          alt={{title}}
+          title={{title}}
+          loading='lazy'
+        /></a>
+      <div class='trend-info'>
+        <p class='info-item'>
+          <b>{{title}}</b>
+        </p>
+        <p class='info-item'>
+          <b>Genres: {{genre_ids}}</b>
+        </p>
+        <p class='info-item'>
+          <b>Release date: {{release_date}}</b>
+        </p>
+      </div>
+    </div>
+  </li>
+{{/each}}
+
+{% comment %}
+{{!-- <img src='{{webformatURL}}' alt='{{tags}}' loading='lazy' /> --}}
+{% endcomment %}
