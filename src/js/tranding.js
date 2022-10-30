@@ -11,6 +11,7 @@ async function getTrending() {
   try {
     const movies = await API.getMovie();
     const { results } = movies;
+    console.log(results);
 
     refs.trend.innerHTML = '';
     const markupTrend = results
