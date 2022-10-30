@@ -18,16 +18,18 @@
     "url": "https://github.com/vokur13/team-proj-filmoteka-draft/issues"
   },
   "dependencies": {
-    "modern-normalize": "^1.1.0",
+    "firebase": "^9.13.0",
+    "firebaseui": "^6.0.1",
     "infinite-scroll": "^4.0.1",
+    "modern-normalize": "^1.1.0",
     "notiflix": "^3.2.5",
     "simplelightbox": "^2.10.3"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
     "axios": "^0.27.2",
-    "parcel": "^2.6.0",
     "buffer": "^6.0.3",
+    "parcel": "^2.6.0",
     "parcel-bundler": "^1.12.5",
     "parcel-plugin-handlebars-precompile": "^1.0.2",
     "parcel-plugin-nuke-dist": "^1.0.1",

@@ -1,28 +1,49 @@
 {{#each this}}
-  <li class='trend-item'>
-    <div class='trend-poster'>
-      <img src='{{poster_path}}' alt='{{title}}' loading='lazy' />
-      <a href={{poster_path}}><img
-          src={{poster_path}}
-          alt={{title}}
-          title={{title}}
-          loading='lazy'
-        /></a>
-      <div class='trend-info'>
-        <p class='info-item'>
-          <b>{{title}}</b>
-        </p>
-        <p class='info-item'>
-          <b>Genres: {{genre_ids}}</b>
-        </p>
-        <p class='info-item'>
-          <b>Release date: {{release_date}}</b>
-        </p>
+  <li class='film-gallery__item card'>
+    <a href='http://' class='link'>
+      <img
+        class='film-gallery__img'
+        src='./images/film-gallery3.jpg'
+        alt='фото фільма'
+      />
+      <div class='film'>
+        <h2 class='film__title'>{{title}}</h2>
       </div>
-    </div>
+      <div class='film__wrapper'>
+        <p class='film__genre film__wrapper-reset'>{{genre_ids}}</p>
+        <p class='film__line film__wrapper-reset'>|</p>
+        <p class='film__relise film__wrapper-reset'>{{release_date}}</p>
+        <p
+          class='film__rating visually-hidden film__wrapper-reset'
+        >{{vote_average}}</p>
+      </div>
+    </a>
   </li>
 {{/each}}
 
 {% comment %}
 {{!-- <img src='{{webformatURL}}' alt='{{tags}}' loading='lazy' /> --}}
+{% endcomment %} {% comment %}
+<li class='trend-item'>
+  <div class='trend-poster'>
+    <img src='{{poster_path}}' alt='{{title}}' loading='lazy' />
+    <a href={{poster_path}}><img
+        src={{poster_path}}
+        alt={{title}}
+        title={{title}}
+        loading='lazy'
+      /></a>
+    <div class='trend-info'>
+      <p class='info-item'>
+        <b>{{title}}</b>
+      </p>
+      <p class='info-item'>
+        <b>Genres: {{genre_ids}}</b>
+      </p>
+      <p class='info-item'>
+        <b>Release date: {{release_date}}</b>
+      </p>
+    </div>
+  </div>
+</li>
 {% endcomment %}

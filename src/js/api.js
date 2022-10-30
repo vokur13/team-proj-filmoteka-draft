@@ -9,6 +9,9 @@ export const getMovie = async () => {
   return data;
 };
 
+const api_image = 'http://image.tmdb.org/t/p/w780${item.poster_path}';
+//   https://api.themoviedb.org/3/movie/{movie_id}/images?api_key=e1d2d59faab8416a91a95646b10aa32e&language=en-US
+
 const api_movie =
   'https://api.themoviedb.org/3/trending/movie/day?api_key=e1d2d59faab8416a91a95646b10aa32e';
 
