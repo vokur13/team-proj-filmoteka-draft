@@ -1,6 +1,5 @@
 import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.css';
-import { getMovie } from './api';
 
 const options = {
   totalItems: 20000,
@@ -32,10 +31,6 @@ const options = {
 export const container = document.getElementById('tui-pagination-container');
 export const instance = new Pagination(container, options);
 
-// const pagination = new Pagination('.tui-pagination', options);
-
 // instance.getCurrentPage();
-// console.log('getCurrentPage()', instance.getCurrentPage());
 
-// instance.movePageTo(7);
-// console.log('movePageTo()', instance.movePageTo(4));
+// instance.movePageTo();

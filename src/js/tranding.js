@@ -22,7 +22,6 @@ getTrending(1);
 
 container.addEventListener('click', handleTui);
 
-function handleTui(e) {
-  console.log(e.target.textContent);
-  getTrending(e.target.textContent);
+function handleTui() {
+  getTrending(instance.getCurrentPage());
 }
