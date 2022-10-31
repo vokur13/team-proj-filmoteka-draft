@@ -1,16 +1,19 @@
 import axios from 'axios';
 
-const API_KEY = 'e1d2d59faab8416a91a95646b10aa32e';
+const searchParams = new URLSearchParams({
+  api_key: 'e1d2d59faab8416a91a95646b10aa32e',
+});
 
 axios.defaults.baseURL = 'https://api.themoviedb.org/3';
 
-export const getMovie = async () => {
-  const { data } = await axios.get(`/trending/movie/day?api_key=${API_KEY}`);
+export const getMovie = async page => {
+  const { data } = await axios.get(
+    `/trending/movie/day?page=${page}&${searchParams}`
+  );
+  console.log(data.total_results);
+  console.log(data.page);
   return data;
 };
-
-const api_image = 'http://image.tmdb.org/t/p/w780${item.poster_path}';
-//   https://api.themoviedb.org/3/movie/{movie_id}/images?api_key=e1d2d59faab8416a91a95646b10aa32e&language=en-US
 
 const api_movie =
   'https://api.themoviedb.org/3/trending/movie/day?api_key=e1d2d59faab8416a91a95646b10aa32e';
@@ -26,3 +29,6 @@ const api_movieID =
 
 const api_movie_trailer =
   'https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key=e1d2d59faab8416a91a95646b10aa32e&language=en-US';
+
+const api_image = 'http://image.tmdb.org/t/p/w780${item.poster_path}';
+//   https://api.themoviedb.org/3/movie/{movie_id}/images?api_key=e1d2d59faab8416a91a95646b10aa32e&language=en-US

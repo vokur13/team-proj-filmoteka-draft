@@ -1,3 +1,19 @@
+import { setupWatchedMovies, setupQueueMovies } from './materialize';
+
+// get data
+db.collection('watched_movies')
+  .get()
+  .then(snapshot => {
+    setupWatchedMovies(snapshot.docs);
+  });
+
+db.collection('queue_movies')
+  .get()
+  .then(snapshot => {
+    console.log(snapshot.docs);
+    setupQueueMovies(snapshot.docs);
+  });
+
 // listen for auth status changes
 auth.onAuthStateChanged(user => {
   if (user) {
@@ -9,7 +25,7 @@ auth.onAuthStateChanged(user => {
 
 // signup
 const signupForm = document.querySelector('#signup-form');
-console.log(signupForm);
+// console.log(signupForm);
 
 signupForm.addEventListener('submit', signUp);
 

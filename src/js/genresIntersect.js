@@ -11,5 +11,5 @@ export const genreTitle = (genreID, genres) => {
     return (arrToShow = arr.slice(0, 3).join(', ').concat(', Other'));
   }
 
-  return (arrToShow = arr.slice(0, arr.length).join(', '));
+  return (arrToShow = arr.slice(0, arr.length - 1).join(', '));
 };
