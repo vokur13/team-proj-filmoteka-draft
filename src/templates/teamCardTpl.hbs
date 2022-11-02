@@ -1,0 +1,14 @@
+{{#each this}}
+  <div class='team__card'>
+    <div class='team__wrapper'>
+      <img class='team__image' src='{{img}}' alt='{{name}}' width='50' />
+    </div>
+    <div class='team__wrapper'>
+      <p>{{name}}</p>
+      <p>
+        <a href='{{github}}' class='team__git'>GitHub: {{github}}</a>
+      </p>
+      <p>Role: {{role}}</p>
+    </div>
+  </div>
+{{/each}}
